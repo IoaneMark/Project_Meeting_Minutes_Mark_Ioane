@@ -1,0 +1,108 @@
+{% extends "base.html" %} {% block title %} {% endblock %}{% block content %}
+
+<form method="POST">    
+    <h3 align="center">Host Meeting</h3>
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            id="title"
+            name="title" 
+            placeholder="Enter Title:"
+        />
+    </div>
+
+    <div class="form-group">
+        <label for="topic">Topic</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            id="topic"
+            name="topic" 
+            placeholder="Enter topic of this meeting:"
+        />
+    </div>
+
+    <div class="form-group">
+        <label for="datetime">Date & Time</label>
+        <input 
+            type = "datetime-local" 
+            class = "form-control" 
+            id = "datetime"
+            name = "datetime" 
+            placeholder="Enter Date & Time:"
+        />
+    </div>
+
+    <div class="form-group">
+        <label for="attendee">Attendee(s)</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            id="attendee"
+            name="attendee" 
+            placeholder="Attendee(s):"
+        />
+    </div>
+
+    <div class="form-group">
+        <label for="raised">Raised by</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            id="raised"
+            name="raised" 
+            placeholder="Raised by:"
+        />
+    </div>
+
+    <div class="form-group">
+        <label for="actions">Actions required</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            id="actions"
+            name="actions" 
+            placeholder="Enter actions required for the meeting:"
+        />
+    </div>
+
+    <div class="form-group">
+        <label for="actionsby">Actioned by</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            id="actionsby"
+            name="actionsby" 
+            placeholder="Enter the person that actions the meeting:"
+        />
+    </div>
+
+    <div class="form-group">
+        <label for="information">Subsequent Information</label>
+        <input 
+            type="text" 
+            class="form-control" 
+            id="information"
+            name="information" 
+            placeholder="Enter additional information (optional):"
+        />
+    </div>
+    
+    <div class="form-group">
+        <label for="completion">Date of Completion</label>
+        <input 
+            type = "datetime-local" 
+            class = "form-control" 
+            id = "completion"
+            name = "completion" 
+            placeholder="Enter Date & Time:"
+        />
+    </div>
+
+<br />
+<button type="Submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}

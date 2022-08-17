@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block title %}{% endblock %}{% block content %}
+
+<h1 align = "center"> View Your Meetings</h1>
+
+<br/>
+  <table class="table table-striped center">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Topic</th>
+            <th>DateTime</th>
+            <th>Attendee</th>
+            <th>Raised by</th>
+            <th>Actions Required</th>
+            <th>Actioned by</th>
+            <th>Information</th>
+            <th>Time completed</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for meeting in user.meetings %}
+        <tr>
+            <td>{{ meeting.title }}</td>
+            <td>{{ meeting.topic }}</td>
+            <td>{{ meeting.datetime }}</td>
+            <td>{{ meeting.attendee }}</td>
+            <td>{{ meeting.raised }}</td>
+            <td>{{ meeting.actions }}</td>
+            <td>{{ meeting.actionsby }}</td>
+            <td>{{ meeting.information }}</td>
+            <td>{{ meeting.completion }}</td>
+            <td>
+                <form action="{{ url_for('views.deleteMeeting', id=meeting.id) }}" method="post">
+                    <input type="submit" value="Delete" class="btn btn-danger">
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+
+{% endblock %}
